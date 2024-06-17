@@ -1,0 +1,3 @@
+[submodule "cybergear_m5"]
+	path = cybergear_m5
+	url = https://github.com/project-sternbergia/cybergear_m5.git

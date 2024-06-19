@@ -31,7 +31,11 @@ bool CybergearCanInterfaceTeensy::send_message(
   sendmsg.id = id;
   sendmsg.flags.extended = (ext) ? 1 : 0;
   sendmsg.len = len;
-  memcpy(sendmsg.buf, data, len);
+  // sendmsg.buf = data;
+  // memcpy(sendmsg.buf, data, len);
+  for(int i;i<len;++i){
+    sendmsg.buf[i]=data[i];
+  }
   return can1.write(sendmsg);
 }
 
@@ -48,7 +52,8 @@ bool CybergearCanInterfaceTeensy::read_message(unsigned long & id, uint8_t * dat
   id = readmsg.id;
   len = readmsg.len;
   memcpy(data, readmsg.buf, readmsg.len);
-  return true;
+  return true; 
+  
 }
 
 

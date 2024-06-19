@@ -1,3 +1,6 @@
-[submodule "cybergear_m5"]
-	path = cybergear_m5
-	url = https://github.com/project-sternbergia/cybergear_m5.git
+[submodule "FlexCAN_T4"]
+	path = FlexCAN_T4
+	url = https://github.com/tonton81/FlexCAN_T4.git
+[submodule "ArduinoRingBuffer"]
+	path = ArduinoRingBuffer
+	url = https://github.com/wizard97/ArduinoRingBuffer.git

@@ -53,7 +53,7 @@ typedef struct CAN_error_t {
 
 
 typedef struct CAN_message_t {
-  uint32_t id = 0;          // can identifier
+  uint64_t id = 0;          // can identifier
   uint16_t timestamp = 0;   // FlexCAN time when message arrived
   uint8_t idhit = 0; // filter that id came from
   struct {

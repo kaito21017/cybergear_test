@@ -44,6 +44,7 @@ bool CybergearCanInterfaceTeensy::read_message(unsigned long & id, uint8_t * dat
   CG_DEBUG_FUNC
   // CanFrame frame = {0};
   CAN_message_t readmsg;
+  readmsg.flags.extended = 1;
   if (!can1.read(readmsg)) return false;
 
   // get mseesage from buffer
